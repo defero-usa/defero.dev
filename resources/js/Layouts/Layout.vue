@@ -189,108 +189,108 @@
 <!--                </div>-->
 
                 <!-- CTA Section -->
-                <div class="relative bg-gray-900">
-                    <div class="relative h-56 bg-indigo-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
-                        <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&sat=-100" alt="" />
-                        <div aria-hidden="true" class="absolute inset-0 bg-gradient-to-r from-teal-500 to-cyan-600 mix-blend-multiply" />
-                    </div>
-                    <div class="relative mx-auto max-w-md px-4 py-12 sm:max-w-7xl sm:px-6 sm:py-20 md:py-28 lg:px-8 lg:py-32">
-                        <div class="md:ml-auto md:w-1/2 md:pl-10">
-                            <h2 class="text-base font-semibold uppercase tracking-wider text-gray-300">
-                                Award winning support
-                            </h2>
-                            <p class="mt-2 text-white text-3xl font-extrabold tracking-tight sm:text-4xl">
-                                We’re here to help
-                            </p>
-                            <p class="mt-3 text-lg text-gray-300">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, egestas tempus tellus etiam sed. Quam a scelerisque amet ullamcorper eu enim et fermentum, augue. Aliquet amet volutpat quisque ut interdum tincidunt duis.
-                            </p>
-                            <div class="mt-8">
-                                <div class="inline-flex rounded-md shadow">
-                                    <a href="#" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 bg-white hover:bg-gray-50">
-                                        Visit the help center
-                                        <ExternalLinkIcon class="-mr-1 ml-3 h-5 w-5 text-gray-400" aria-hidden="true" />
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<!--                <div class="relative bg-gray-900">-->
+<!--                    <div class="relative h-56 bg-indigo-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">-->
+<!--                        <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&sat=-100" alt="" />-->
+<!--                        <div aria-hidden="true" class="absolute inset-0 bg-gradient-to-r from-rad-red-500 to-defero-red-600 mix-blend-multiply" />-->
+<!--                    </div>-->
+<!--                    <div class="relative mx-auto max-w-md px-4 py-12 sm:max-w-7xl sm:px-6 sm:py-20 md:py-28 lg:px-8 lg:py-32">-->
+<!--                        <div class="md:ml-auto md:w-1/2 md:pl-10">-->
+<!--                            <h2 class="text-base font-semibold uppercase tracking-wider text-gray-300">-->
+<!--                                Award winning support-->
+<!--                            </h2>-->
+<!--                            <p class="mt-2 text-white text-3xl font-extrabold tracking-tight sm:text-4xl">-->
+<!--                                We’re here to help-->
+<!--                            </p>-->
+<!--                            <p class="mt-3 text-lg text-gray-300">-->
+<!--                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, egestas tempus tellus etiam sed. Quam a scelerisque amet ullamcorper eu enim et fermentum, augue. Aliquet amet volutpat quisque ut interdum tincidunt duis.-->
+<!--                            </p>-->
+<!--                            <div class="mt-8">-->
+<!--                                <div class="inline-flex rounded-md shadow">-->
+<!--                                    <a href="#" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 bg-white hover:bg-gray-50">-->
+<!--                                        Visit the help center-->
+<!--                                        <ExternalLinkIcon class="-mr-1 ml-3 h-5 w-5 text-gray-400" aria-hidden="true" />-->
+<!--                                    </a>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
             </main>
             <footer class="bg-gray-50" aria-labelledby="footerHeading">
                 <h2 id="footerHeading" class="sr-only">Footer</h2>
-                <div class="max-w-md mx-auto pt-12 px-4 sm:max-w-7xl sm:px-6 lg:pt-16 lg:px-8">
-                    <div class="xl:grid xl:grid-cols-3 xl:gap-8">
-                        <div class="space-y-8 xl:col-span-1">
-                            <img class="h-10" src="https://tailwindui.com/img/logos/workflow-mark-gray-300.svg" alt="Company name" />
-                            <p class="text-gray-500 text-base">
-                                Making the world a better place through constructing elegant hierarchies.
-                            </p>
-                            <div class="flex space-x-6">
-                                <a v-for="item in footerNavigation.social" :key="item.name" :href="item.href" class="text-gray-400 hover:text-gray-500">
-                                    <span class="sr-only">{{ item.name }}</span>
-                                    <component :is="item.icon" class="h-6 w-6" aria-hidden="true" />
-                                </a>
-                            </div>
-                        </div>
-                        <div class="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
-                            <div class="md:grid md:grid-cols-2 md:gap-8">
-                                <div>
-                                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                                        Solutions
-                                    </h3>
-                                    <ul class="mt-4 space-y-4">
-                                        <li v-for="item in footerNavigation.solutions" :key="item.name">
-                                            <a :href="item.href" class="text-base text-gray-500 hover:text-gray-900">
-                                                {{ item.name }}
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="mt-12 md:mt-0">
-                                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                                        Support
-                                    </h3>
-                                    <ul class="mt-4 space-y-4">
-                                        <li v-for="item in footerNavigation.support" :key="item.name">
-                                            <a :href="item.href" class="text-base text-gray-500 hover:text-gray-900">
-                                                {{ item.name }}
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="md:grid md:grid-cols-2 md:gap-8">
-                                <div>
-                                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                                        Company
-                                    </h3>
-                                    <ul class="mt-4 space-y-4">
-                                        <li v-for="item in footerNavigation.company" :key="item.name">
-                                            <a :href="item.href" class="text-base text-gray-500 hover:text-gray-900">
-                                                {{ item.name }}
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="mt-12 md:mt-0">
-                                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                                        Legal
-                                    </h3>
-                                    <ul class="mt-4 space-y-4">
-                                        <li v-for="item in footerNavigation.legal" :key="item.name">
-                                            <a :href="item.href" class="text-base text-gray-500 hover:text-gray-900">
-                                                {{ item.name }}
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mt-12 border-t border-gray-200 py-8">
+                <div class="max-w-md mx-auto px-4 sm:max-w-7xl sm:px-6 lg:px-8">
+<!--                    <div class="xl:grid xl:grid-cols-3 xl:gap-8">-->
+<!--                        <div class="space-y-8 xl:col-span-1">-->
+<!--                            <img class="h-10" src="https://tailwindui.com/img/logos/workflow-mark-gray-300.svg" alt="Company name" />-->
+<!--                            <p class="text-gray-500 text-base">-->
+<!--                                Making the world a better place through constructing elegant hierarchies.-->
+<!--                            </p>-->
+<!--                            <div class="flex space-x-6">-->
+<!--                                <a v-for="item in footerNavigation.social" :key="item.name" :href="item.href" class="text-gray-400 hover:text-gray-500">-->
+<!--                                    <span class="sr-only">{{ item.name }}</span>-->
+<!--                                    <component :is="item.icon" class="h-6 w-6" aria-hidden="true" />-->
+<!--                                </a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">-->
+<!--                            <div class="md:grid md:grid-cols-2 md:gap-8">-->
+<!--                                <div>-->
+<!--                                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">-->
+<!--                                        Solutions-->
+<!--                                    </h3>-->
+<!--                                    <ul class="mt-4 space-y-4">-->
+<!--                                        <li v-for="item in footerNavigation.solutions" :key="item.name">-->
+<!--                                            <a :href="item.href" class="text-base text-gray-500 hover:text-gray-900">-->
+<!--                                                {{ item.name }}-->
+<!--                                            </a>-->
+<!--                                        </li>-->
+<!--                                    </ul>-->
+<!--                                </div>-->
+<!--                                <div class="mt-12 md:mt-0">-->
+<!--                                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">-->
+<!--                                        Support-->
+<!--                                    </h3>-->
+<!--                                    <ul class="mt-4 space-y-4">-->
+<!--                                        <li v-for="item in footerNavigation.support" :key="item.name">-->
+<!--                                            <a :href="item.href" class="text-base text-gray-500 hover:text-gray-900">-->
+<!--                                                {{ item.name }}-->
+<!--                                            </a>-->
+<!--                                        </li>-->
+<!--                                    </ul>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="md:grid md:grid-cols-2 md:gap-8">-->
+<!--                                <div>-->
+<!--                                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">-->
+<!--                                        Company-->
+<!--                                    </h3>-->
+<!--                                    <ul class="mt-4 space-y-4">-->
+<!--                                        <li v-for="item in footerNavigation.company" :key="item.name">-->
+<!--                                            <a :href="item.href" class="text-base text-gray-500 hover:text-gray-900">-->
+<!--                                                {{ item.name }}-->
+<!--                                            </a>-->
+<!--                                        </li>-->
+<!--                                    </ul>-->
+<!--                                </div>-->
+<!--                                <div class="mt-12 md:mt-0">-->
+<!--                                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">-->
+<!--                                        Legal-->
+<!--                                    </h3>-->
+<!--                                    <ul class="mt-4 space-y-4">-->
+<!--                                        <li v-for="item in footerNavigation.legal" :key="item.name">-->
+<!--                                            <a :href="item.href" class="text-base text-gray-500 hover:text-gray-900">-->
+<!--                                                {{ item.name }}-->
+<!--                                            </a>-->
+<!--                                        </li>-->
+<!--                                    </ul>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+                    <div class="border-t divider-gray-600 py-8">
                         <p class="text-base text-gray-400 xl:text-center">
-                            &copy; 2020 Workflow, Inc. All rights reserved.
+                            &copy; 2021 Defero, LLC. All rights reserved.
                         </p>
                     </div>
                 </div>
@@ -322,37 +322,37 @@ const navigation = [
     { name: 'Company', href: '#' },
 ]
 const projects = [
-    {
-        name: 'Push to Deploy',
-        description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi vitae lobortis.',
-        icon: CloudUploadIcon,
-    },
-    {
-        name: 'SSL Certificates',
-        description: 'Qui aut temporibus nesciunt vitae dicta repellat sit dolores pariatur. Temporibus qui illum aut.',
-        icon: LockClosedIcon,
-    },
-    {
-        name: 'Simple Queues',
-        description: 'Rerum quas incidunt deleniti quaerat suscipit mollitia. Amet repellendus ut odit dolores qui.',
-        icon: RefreshIcon,
-    },
-    {
-        name: 'Advanced Security',
-        description: 'Ullam laboriosam est voluptatem maxime ut mollitia commodi. Et dignissimos suscipit perspiciatis.',
-        icon: ShieldCheckIcon,
-    },
-    {
-        name: 'Powerful API',
-        description:
-            'Ab a facere voluptatem in quia corrupti veritatis aliquam. Veritatis labore quaerat ipsum quaerat id.',
-        icon: CogIcon,
-    },
-    {
-        name: 'Database Backups',
-        description: 'Quia qui et est officia cupiditate qui consectetur. Ratione similique et impedit ea ipsum et.',
-        icon: ServerIcon,
-    },
+    // {
+    //     name: 'Push to Deploy',
+    //     description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi vitae lobortis.',
+    //     icon: CloudUploadIcon,
+    // },
+    // {
+    //     name: 'SSL Certificates',
+    //     description: 'Qui aut temporibus nesciunt vitae dicta repellat sit dolores pariatur. Temporibus qui illum aut.',
+    //     icon: LockClosedIcon,
+    // },
+    // {
+    //     name: 'Simple Queues',
+    //     description: 'Rerum quas incidunt deleniti quaerat suscipit mollitia. Amet repellendus ut odit dolores qui.',
+    //     icon: RefreshIcon,
+    // },
+    // {
+    //     name: 'Advanced Security',
+    //     description: 'Ullam laboriosam est voluptatem maxime ut mollitia commodi. Et dignissimos suscipit perspiciatis.',
+    //     icon: ShieldCheckIcon,
+    // },
+    // {
+    //     name: 'Powerful API',
+    //     description:
+    //         'Ab a facere voluptatem in quia corrupti veritatis aliquam. Veritatis labore quaerat ipsum quaerat id.',
+    //     icon: CogIcon,
+    // },
+    // {
+    //     name: 'Database Backups',
+    //     description: 'Quia qui et est officia cupiditate qui consectetur. Ratione similique et impedit ea ipsum et.',
+    //     icon: ServerIcon,
+    // },
 ]
 const blogPosts = [
     {
