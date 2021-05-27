@@ -75,15 +75,17 @@
                         </p>
                         <div class="mt-12">
                             <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                                <div v-for="project in projects" :key="project.name" class="pt-6">
+                                <div v-for="project in repos" :key="project.name" class="pt-6">
                                     <div class="flow-root bg-gray-50 rounded-lg px-6 pb-8">
                                         <div class="-mt-6">
                                             <div>
                                                 <span class="inline-flex items-center justify-center p-3 bg-gradient-to-r from-rad-red-500 to-defero-red-600 rounded-md shadow-lg">
-                                                  <component :is="project.icon" class="h-6 w-6 text-white" aria-hidden="true" />
+<!--                                                  <component :is="project.icon" class="h-6 w-6 text-white" aria-hidden="true" />-->
                                                 </span>
                                             </div>
-                                            <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">{{ project.name }}</h3>
+                                            <a :href="project.url">
+                                                <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">{{ project.name }}</h3>
+                                            </a>
                                             <p class="mt-5 text-base text-gray-500">
                                                 {{ project.description }}
                                             </p>
@@ -314,45 +316,6 @@ import {
 import { ChevronRightIcon, ExternalLinkIcon } from '@heroicons/vue/solid'
 import Navigation from "./Navigation";
 
-const navigation = [
-    { name: 'Product', href: '#' },
-    { name: 'Features', href: '#' },
-    { name: 'Marketplace', href: '#' },
-    { name: 'Company', href: '#' },
-]
-const projects = [
-    // {
-    //     name: 'Push to Deploy',
-    //     description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi vitae lobortis.',
-    //     icon: CloudUploadIcon,
-    // },
-    // {
-    //     name: 'SSL Certificates',
-    //     description: 'Qui aut temporibus nesciunt vitae dicta repellat sit dolores pariatur. Temporibus qui illum aut.',
-    //     icon: LockClosedIcon,
-    // },
-    // {
-    //     name: 'Simple Queues',
-    //     description: 'Rerum quas incidunt deleniti quaerat suscipit mollitia. Amet repellendus ut odit dolores qui.',
-    //     icon: RefreshIcon,
-    // },
-    // {
-    //     name: 'Advanced Security',
-    //     description: 'Ullam laboriosam est voluptatem maxime ut mollitia commodi. Et dignissimos suscipit perspiciatis.',
-    //     icon: ShieldCheckIcon,
-    // },
-    // {
-    //     name: 'Powerful API',
-    //     description:
-    //         'Ab a facere voluptatem in quia corrupti veritatis aliquam. Veritatis labore quaerat ipsum quaerat id.',
-    //     icon: CogIcon,
-    // },
-    // {
-    //     name: 'Database Backups',
-    //     description: 'Quia qui et est officia cupiditate qui consectetur. Ratione similique et impedit ea ipsum et.',
-    //     icon: ServerIcon,
-    // },
-]
 const blogPosts = [
     {
         id: 1,
@@ -525,10 +488,14 @@ export default {
         MenuIcon,
         XIcon,
     },
+    props: {
+        repos: {
+            type: Array,
+            required: true
+        }
+    },
     setup() {
         return {
-            navigation,
-            projects,
             footerNavigation,
         }
     },
