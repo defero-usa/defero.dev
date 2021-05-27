@@ -5,8 +5,7 @@
                 <div class="flex items-center flex-1">
                     <div class="flex items-center justify-between w-full md:w-auto">
                         <a href="#">
-                            <span class="sr-only">Workflow</span>
-                            <img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-teal-200-cyan-400.svg" alt="" />
+                            <application-logo class="w-36" />
                         </a>
                         <div class="-mr-2 flex items-center md:hidden">
                             <PopoverButton class="bg-gray-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-800 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white">
@@ -65,6 +64,7 @@
 import {Popover, PopoverButton, PopoverPanel} from "@headlessui/vue";
 import {ChevronRightIcon, ExternalLinkIcon} from "@heroicons/vue/solid/esm";
 import {MenuIcon, XIcon} from "@heroicons/vue/outline/esm";
+import ApplicationLogo from "../Jetstream/ApplicationLogo";
 
 const navigation = [
     { name: 'Our Github', href: 'https://github.com/defer-usa' },
@@ -73,6 +73,7 @@ const navigation = [
 
 export default {
     components: {
+        ApplicationLogo,
         Popover,
         PopoverButton,
         PopoverPanel,
