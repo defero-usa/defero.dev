@@ -1,11 +1,11 @@
-name: Laravel Dusk
+name: PHPUnit
 
 on:
   push:
     branches: [ master ]
 
 jobs:
-  LaravelDusk:
+  PHPUnit:
     runs-on: ubuntu-latest
 
     services:
@@ -24,7 +24,7 @@ jobs:
         php: [ 8.0 ]
         node: [ 14.0 ]
 
-    name: PHP ${{ matrix.php }} - Laravel Dusk
+    name: PHP ${{ matrix.php }} - PHPUnit
 
     steps:
       - name: Setup PHP
@@ -56,30 +56,13 @@ jobs:
       - name: Directory Permissions
         run: chmod -R 777 storage bootstrap/cache
 
+      - name: Create Database
+        run: |
+          mkdir -p database
+          touch database/database.sqlite
       - name: NPM Install & Compile
         run: |
           npm i
           npm run dev
-      - name: Setup Dusk
-        run: |
-          php artisan dusk:chrome-driver
-          php artisan serve  > /dev/null 2>&1 &
-          curl localhost:8000 &
-          ./vendor/laravel/dusk/bin/chromedriver-linux > /dev/null 2>&1 &
-      - name: Dusk Test
-        run: |
-          php artisan serve > /dev/null 2>&1 &
-          php artisan dusk
-      - name: Sentry Release - PHP
-        uses: getsentry/action-release@v1.1.5
-        env:
-          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
-          SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
-          SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
-        with:
-          environment: production
-
-      - name: Deploy to Development
-        uses: joelwmale/webhook-action@2.1.0
-        with:
-          url: ${{ secrets.FORGE_DEPLOY_URL }}
+      - name: PHPUnit
+        run: vendor/bin/phpunit
