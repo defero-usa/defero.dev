@@ -29,6 +29,8 @@ module.exports = {
                 body: ['Raleway', ... defaultTheme.fontFamily.serif],
             },
             colors: {
+                teal: colors.teal,
+                cyan: colors.cyan,
                 'rad-red': {
                     50: '#9b6c6f',
                     100: '#8a5457',
@@ -112,5 +114,9 @@ module.exports = {
         },
     },
 
-    plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
+    plugins: [
+        require('@tailwindcss/forms'),
+        require('@tailwindcss/typography'),
+        require('@tailwindcss/aspect-ratio'),
+    ],
 };
