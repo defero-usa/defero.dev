@@ -13,7 +13,7 @@
                                         <span class="ml-4 text-sm">Visit our careers page</span>
                                         <ChevronRightIcon class="ml-2 w-5 h-5 text-gray-500" aria-hidden="true" />
                                     </a>
-                                    <h1 class="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
+                                    <h1 class="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl font-heading">
                                         <span class="block">Defero</span>
                                         <span class="pb-3 block bg-clip-text text-transparent bg-gradient-to-r from-rad-red-500 to-defero-red-600 sm:pb-5">Development</span>
                                     </h1>
