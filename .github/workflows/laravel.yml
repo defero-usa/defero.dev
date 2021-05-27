@@ -59,17 +59,20 @@ jobs:
       - name: NPM Install & Compile
         run: |
           npm i
-          npm run dev
+          npm run prod
+
       - name: Setup Dusk
         run: |
           php artisan dusk:chrome-driver
           php artisan serve  > /dev/null 2>&1 &
           curl localhost:8000 &
           ./vendor/laravel/dusk/bin/chromedriver-linux > /dev/null 2>&1 &
+
       - name: Dusk Test
         run: |
           php artisan serve > /dev/null 2>&1 &
           php artisan dusk
+
       - name: Sentry Release - PHP
         uses: getsentry/action-release@v1.1.5
         env:

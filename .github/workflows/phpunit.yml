@@ -63,6 +63,7 @@ jobs:
       - name: NPM Install & Compile
         run: |
           npm i
-          npm run dev
+          npm run prod
+
       - name: PHPUnit
         run: vendor/bin/phpunit
