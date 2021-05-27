@@ -67,7 +67,7 @@ import {MenuIcon, XIcon} from "@heroicons/vue/outline/esm";
 import ApplicationLogo from "../Jetstream/ApplicationLogo";
 
 const navigation = [
-    { name: 'Our Github', href: 'https://github.com/defer-usa' },
+    { name: 'Our Github', href: 'https://github.com/defero-usa' },
     { name: 'Defero', href: 'https://deferousa.com?utm_source=defero.dev&utm_medium=referral&utm_campaign=Nav+Bar' },
 ]
 
