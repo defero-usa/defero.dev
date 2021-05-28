@@ -15,7 +15,7 @@
                         </div>
                     </div>
                     <div class="hidden space-x-8 md:flex md:ml-10">
-                        <a v-for="item in navigation" :key="item.name" :href="item.href" class="text-base font-medium text-white hover:text-gray-300">{{ item.name }}</a>
+                        <a v-for="item in navigation" :key="item.name" :href="item.href" class="text-base font-medium text-white hover:text-gray-300" :class="(route().current().indexOf(item.href) > -1?'text-gray-300':'')">{{ item.name }}</a>
                     </div>
                 </div>
                 <div class="hidden md:flex md:items-center md:space-x-6">
@@ -67,8 +67,10 @@ import {MenuIcon, XIcon} from "@heroicons/vue/outline/esm";
 import ApplicationLogo from "../Jetstream/ApplicationLogo";
 
 const navigation = [
+    { name: 'Home', href: route('home') },
+    { name: 'Repos', href: route('repo.index') },
+    { name: 'Defero Marketing', href: 'https://deferousa.com?utm_source=defero.dev&utm_medium=referral&utm_campaign=Nav+Bar' },
     { name: 'Our Github', href: 'https://github.com/defero-usa' },
-    { name: 'Defero', href: 'https://deferousa.com?utm_source=defero.dev&utm_medium=referral&utm_campaign=Nav+Bar' },
 ]
 
 export default {
