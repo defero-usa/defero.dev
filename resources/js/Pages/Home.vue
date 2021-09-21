@@ -105,11 +105,10 @@
 
 <script>
     import AppLayout from '@/Layouts/AppLayout'
-    import Layout from "../Layouts/Layout";
-    import RepoList from "../Components/RepoList";
-    import Testimonial from "../Components/Testimonial";
-    import BlogList from "../Components/BlogList";
-    import Repo from "./Repo";
+    import Layout from "@/Layouts/Layout";
+    import RepoList from "@/Components/RepoList";
+    import Testimonial from "@/Components/Testimonial";
+    import BlogList from "@/Components/BlogList";
 
     const blogPosts = []
 
@@ -126,7 +125,6 @@
             }
         },
         components: {
-            Repo,
             BlogList,
             Testimonial,
             RepoList,

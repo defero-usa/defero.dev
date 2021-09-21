@@ -14,6 +14,7 @@
         "http-interop/http-factory-guzzle": "^1.0",
         "inertiajs/inertia-laravel": "^0.3.5",
         "knplabs/github-api": "^3.0",
+        "laravel/forge-sdk": "^3.8",
         "laravel/framework": "^8.40",
         "laravel/jetstream": "^2.3",
         "laravel/sanctum": "^2.6",

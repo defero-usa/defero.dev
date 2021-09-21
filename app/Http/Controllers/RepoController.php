@@ -9,8 +9,8 @@ use Inertia\Inertia;
 class RepoController extends Controller
 {
     public function index() {
-        return Inertia::render('Repos', [
-            'repos' => Repository::all(),
+        return Inertia::render('Repository/Index', [
+            'repos' => Repository::public()->get(),
         ]);
     }
 
@@ -22,7 +22,7 @@ class RepoController extends Controller
      */
     public function view(Repository $repository, $docs = 'README.md'): \Inertia\Response
     {
-        return Inertia::render('Repo', [
+        return Inertia::render('Repository/Show', [
             'docs' => $repository->getDocList(),
             'readme' => $repository->parseReadme($docs),
             'repo' => $repository,

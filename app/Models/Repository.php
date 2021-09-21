@@ -13,7 +13,9 @@ class Repository extends Model
     use HasFactory;
 
     protected $casts = [
-        'info' => 'array'
+        'info' => 'array',
+        'topics' => 'array',
+        'public' => 'boolean'
     ];
 
     protected $guarded = [
@@ -26,6 +28,10 @@ class Repository extends Model
     public function getRouteKeyName(): string
     {
         return 'name';
+    }
+
+    public function scopePublic($query) {
+        return $query->where('public', true);
     }
 
     public function getDocList() {

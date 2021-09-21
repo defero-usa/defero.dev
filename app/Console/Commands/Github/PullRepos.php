@@ -39,11 +39,12 @@ class PullRepos extends Command
      */
     public function handle()
     {
-        $repos = GitHub::user()->repositories('defero-usa');
+        $repos = GitHub::organization('defero-usa')->repositories('defero-usa');
         foreach($repos AS $repo) {
             $r = Repository::firstOrNew([
                 'github_id' => $repo['id']
             ]);
+            $r->public = !$repo['private'];
             $r->name = $repo['name'];
             $r->full_name = $repo['full_name'];
             $r->url = $repo['html_url'];
@@ -53,6 +54,11 @@ class PullRepos extends Command
             $r->forks = $repo['forks_count'];
             $r->open_issues = $repo['open_issues_count'];
             $r->info = $repo;
+            $r->save();
+            $repoTopics = GitHub::repo()->topics('defero-usa', $r->name);
+            $info = $r->info;
+            $info['topics'] = $repoTopics['names'];
+            $r->info = $info;
             $r->save();
         }
     }

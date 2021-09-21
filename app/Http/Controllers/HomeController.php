@@ -8,9 +8,13 @@ use Inertia\Inertia;
 
 class HomeController extends Controller
 {
-    public function index() {
+    /**
+     * @return \Inertia\Response
+     */
+    public function index(): \Inertia\Response
+    {
         return Inertia::render('Home', [
-            'repos' => Repository::all(),
+            'repos' => Repository::public()->get(),
         ]);
     }
 }
